@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Divyasree's Birthday Cake 🎂</title>
+<style>
+:root{--bg:#100820;--lav:#d8b4fe;--pink:#f0abfc;--cream:#fff1dc}*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:#fff;font-family:system-ui,-apple-system,sans-serif;background:radial-gradient(ellipse at 50% 18%,#53316f 0,#26133f 43%,#0d0718 100%);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.26;background-image:radial-gradient(#fff 1px,transparent 1.5px),radial-gradient(#d8b4fe 1px,transparent 1.5px);background-size:71px 79px,109px 127px;background-position:7px 8px,30px 41px}
+main{position:relative;max-width:900px;margin:auto;padding:25px 14px 48px;text-align:center}.kicker{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#e9d5ff}
+h1{font:clamp(2.4rem,8vw,4.6rem)/1.04 Georgia,serif;margin:10px 0;color:#fff2ff;text-shadow:0 0 25px #c084fc88}.sub{color:#ead8ff;max-width:620px;margin:0 auto 18px;line-height:1.55}
+.panel{border:1px solid #ffffff25;background:#ffffff0b;border-radius:22px;padding:17px;margin:14px auto;box-shadow:0 14px 40px #0003}.section-title{font:1.35rem Georgia,serif;margin:0 0 12px;color:#f5d0fe}
+.flavors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.flavor{padding:11px 7px;border:1px solid #ffffff28;border-radius:15px;background:#ffffff08;cursor:pointer}.flavor.active{border-color:#f0abfc;background:#c084fc2b;box-shadow:0 0 0 2px #e879f944}.flavor b{display:block;font-size:.9rem}.flavor small{display:block;color:#e9d5ff;margin-top:3px;font-size:.72rem}
+.stage{position:relative;margin:16px auto;max-width:700px;min-height:395px;border:1px solid #ffffff28;border-radius:26px;background:linear-gradient(150deg,#ffffff10,#ffffff02);box-shadow:0 24px 70px #0007,inset 0 1px #ffffff20;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.aurora{position:absolute;width:360px;height:260px;border-radius:50%;background:#c084fc2c;filter:blur(40px);top:65px}
+.cake-wrap{position:relative;width:min(92vw,500px);height:350px;display:flex;align-items:center;justify-content:center;perspective:900px}
+.plate{position:absolute;bottom:25px;width:90%;height:43px;border-radius:50%;background:linear-gradient(#fff7ed,#c7b9d9 48%,#8c7aa8 65%,#f2e5ff);box-shadow:0 18px 25px #0008}
+.cake{position:absolute;bottom:53px;width:74%;height:190px;transition:filter .5s;filter:drop-shadow(0 16px 12px #0005)}
+.cakebody{position:absolute;bottom:0;width:100%;height:150px;border-radius:17px 17px 29px 29px;background:linear-gradient(90deg,var(--side,#a76ad8),var(--mid,#f4d5ff) 27%,var(--mid,#f4d5ff) 51%,var(--side,#a76ad8));box-shadow:inset 0 7px 12px #fff8,inset 0 -13px 20px #65328b44}
+.cakebody:before,.cakebody:after{content:"";position:absolute;left:0;width:100%;height:20px;background:var(--filling,#713f91);border-top:5px solid #fff0ff;border-bottom:4px solid #fff0ff}
+.cakebody:before{top:42px}.cakebody:after{top:91px}
+.topcake{position:absolute;top:9px;width:100%;height:61px;border-radius:50%;background:radial-gradient(ellipse,var(--top,#fff0fa),var(--mid,#f4d5ff) 60%,var(--side,#b97edc));border:3px solid #fff0ff;box-shadow:inset 0 5px 8px #fff}
+.icing{position:absolute;top:47px;left:0;width:100%;height:34px;background:var(--top,#f8e5ff);border-radius:0 0 18px 18px;clip-path:polygon(0 0,100% 0,100% 75%,94% 100%,88% 68%,80% 100%,70% 70%,61% 100%,52% 70%,43% 100%,34% 68%,24% 100%,15% 72%,7% 100%,0 70%)}
+.name{position:absolute;top:25px;left:0;width:100%;font:italic clamp(13px,3vw,20px) Georgia,serif;color:#60266f;text-shadow:0 1px #fff;text-align:center;z-index:4}
+.berry{position:absolute;z-index:4;width:14px;height:14px;background:radial-gradient(circle at 30% 25%,#ffb2e0,#b0176d 65%,#610d4a);border-radius:50%;box-shadow:0 2px 3px #67204c}
+.candle{position:absolute;z-index:7;top:-25px;width:12px;height:48px;border-radius:3px;background:repeating-linear-gradient(135deg,#fff1c8 0 6px,#d79aff 6px 11px);box-shadow:0 0 0 1px #fff7;cursor:pointer;transition:opacity .2s;touch-action:manipulation}
+.candle:focus-visible{outline:2px solid white}.flame{position:absolute;top:-21px;left:-4px;width:20px;height:25px;border-radius:50% 50% 45% 45%;background:radial-gradient(ellipse at 50% 70%,#fff 0 12%,#ffe99a 28%,#ff9f43 60%,transparent 72%);filter:drop-shadow(0 0 10px #ffbd59);animation:flicker .65s infinite alternate;transform-origin:50% 100%}
+@keyframes flicker{to{transform:rotate(5deg) scale(.9);opacity:.82}}
+.candle.blown .flame{display:none}.candle.blown{opacity:.5}
+.knife{position:absolute;z-index:12;width:150px;height:28px;right:5%;top:15px;transform:rotate(-18deg);cursor:grab;touch-action:none;filter:drop-shadow(0 5px 5px #0006);display:flex;align-items:center;justify-content:center}
+.knife .blade{width:110px;height:14px;background:linear-gradient(#fff,#b9c4d3 48%,#fff);clip-path:polygon(0 0,100% 0,86% 100%,0 100%);border-radius:2px 0 0 2px;border:1px solid #eee}
+.knife .handle{width:42px;height:20px;margin-left:-2px;border-radius:4px 9px 9px 4px;background:linear-gradient(90deg,#54305f,#ba83c8,#4d285b);border:1px solid #e9c9ff}
+#cutLine{position:absolute;z-index:9;display:none;top:0;left:0;width:100%;height:100%;pointer-events:none}
+.slice{position:absolute;z-index:10;bottom:67px;left:55%;width:105px;height:108px;opacity:0;transform:translate(0,0) rotate(0);transition:all 1s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.slice .side{position:absolute;bottom:0;left:0;width:100%;height:77px;background:repeating-linear-gradient(to bottom,var(--slice,#e7b5f4) 0 18px,#fff1ff 18px 27px);clip-path:polygon(0 0,100% 15%,100% 100%,0 100%);border-bottom:5px solid var(--side,#b875d7)}
+.slice .top{position:absolute;top:0;left:0;width:100%;height:32px;border-radius:50%;background:var(--top,#fff0ff);border:3px solid #dba8f0}
+.cake.cut .slice{opacity:1;transform:translate(120px,-18px) rotate(12deg)}
+.hint{font-size:.85rem;color:#ead8ff;min-height:24px;margin:7px 0}
+.actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:12px auto}
+button{font:inherit;font-weight:750;border:1px solid #ffffff35;border-radius:999px;padding:12px 18px;color:white;background:linear-gradient(135deg,#9b5de5,#d16ba5);box-shadow:0 8px 24px #0003;cursor:pointer;transition:transform .15s,filter .15s}button:hover{filter:brightness(1.12);transform:translateY(-2px)}button:disabled{opacity:.48;cursor:default;transform:none}.secondary{background:#ffffff12}
+#celebrate{font:clamp(1.6rem,5vw,2.8rem) Georgia,serif;color:#ffe4fa;text-shadow:0 0 20px #e879f9;margin:16px 0;animation:shine 1.5s infinite alternate}@keyframes shine{to{text-shadow:0 0 30px #e879f9,0 0 50px #c084fc}}
+.note{max-width:600px;margin:16px auto;padding:19px;border:1px solid #ffffff20;background:#ffffff0b;border-radius:18px;color:#f3e8ff;line-height:1.7}.hidden{display:none!important}.tiny{font-size:.78rem;color:#d8c6ed}
+.confetti{position:fixed;top:-20px;width:8px;height:14px;z-index:30;pointer-events:none;animation:fall linear forwards}@keyframes fall{to{transform:translateY(110vh) rotate(780deg);opacity:.1}}
+@media(max-width:500px){.stage{min-height:345px}.cake-wrap{height:305px}.cake{height:170px}.cakebody{height:130px}.topcake{height:54px}.flavors{grid-template-columns:repeat(2,minmax(0,1fr))}.cake.cut .slice{transform:translate(70px,-10px) rotate(12deg)}.knife{top:7px;right:1%;transform:scale(.8) rotate(-18deg)}}
+</style></head><body><main>
+<div class="kicker">A birthday surprise made with love</div><h1>Happy Birthday<br>Divyasree 💜</h1>
+<p class="sub">Panguuuu, choose your cake flavour, tap each candle to blow it out, then take the knife and swipe across the cake to cut your own slice. Your birthday celebration starts here! ✨</p>
+<section class="panel"><h2 class="section-title">First, choose your cake flavour 🍰</h2><div class="flavors" id="flavors">
+<div class="flavor active" data-flavor="purple"><b>💜 Berry Velvet</b><small>Berry cream & vanilla layers</small></div>
+<div class="flavor" data-flavor="chocolate"><b>🍫 Chocolate Truffle</b><small>Rich chocolate & ganache</small></div>
+<div class="flavor" data-flavor="strawberry"><b>🍓 Strawberry Dream</b><small>Strawberry cream layers</small></div>
+<div class="flavor" data-flavor="vanilla"><b>🍦 Vanilla Cloud</b><small>Classic vanilla & cream</small></div>
+<div class="flavor" data-flavor="caramel"><b>🍮 Caramel Crunch</b><small>Caramel cream & golden glaze</small></div>
+<div class="flavor" data-flavor="rainbow"><b>🌈 Rainbow Surprise</b><small>Colourful party layers</small></div>
+</div></section>
+<section class="stage" id="stage" aria-label="Interactive birthday cake"><div class="aurora"></div><div class="cake-wrap" id="cakeWrap">
+<div class="plate"></div><div class="cake" id="cake"><div class="cakebody"></div><div class="topcake"></div><div class="icing"></div><div class="name">Divyasree ♡</div>
+<span class="berry" style="top:48px;left:18%"></span><span class="berry" style="top:54px;left:77%"></span><span class="berry" style="top:97px;left:12%"></span><span class="berry" style="top:110px;left:86%"></span><span class="berry" style="top:135px;left:26%"></span><span class="berry" style="top:131px;left:68%"></span>
+<div class="candle" role="button" tabindex="0" aria-label="Blow out candle" style="left:23%"><div class="flame"></div></div><div class="candle" role="button" tabindex="0" aria-label="Blow out candle" style="left:39%"><div class="flame"></div></div><div class="candle" role="button" tabindex="0" aria-label="Blow out candle" style="left:55%"><div class="flame"></div></div><div class="candle" role="button" tabindex="0" aria-label="Blow out candle" style="left:71%"><div class="flame"></div></div>
+</div><div class="slice" id="slice"><div class="top"></div><div class="side"></div></div>
+<div class="knife hidden" id="knife" aria-label="Knife tool"><div class="blade"></div><div class="handle"></div></div>
+<svg id="cutLine" viewBox="0 0 500 350" preserveAspectRatio="none"><path id="path" d="" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 6" fill="none" filter="drop-shadow(0 0 5px #f0abfc)"/></svg>
+</div></section>
+<p class="hint" id="hint">Step 1: choose a flavour, then tap each candle to blow it out. 🕯️</p>
+<div class="actions"><button id="wish">✨ Make a Wish</button><button class="secondary" id="music">♫ Play Birthday Tune</button></div>
+<div class="actions"><button id="startCut" disabled>🔪 Pick Up the Knife</button><button class="secondary" id="reset">↻ Start Again</button></div>
+<div id="celebrate" class="hidden">HAPPY BIRTHDAY, PANGUUUU! 🎉</div>
+<div class="note" id="message">To my Panguuuu 💜<br>I may not be beside you right now, but I wanted you to have your own little cake-cutting moment. I hope this year brings you lots of happiness, laughter, good food, and beautiful memories. Keep smiling, Divyaaaaa. Happy 20th birthday!<br><strong>— Kishore</strong></div>
+<p class="tiny">On mobile, tap candles to blow them out. After all candles are out, tap “Pick Up the Knife” and swipe your finger across the cake to cut a slice.</p>
+</main>
+<script>
+const cake=document.getElementById('cake'),candles=[...document.querySelectorAll('.candle')],hint=document.getElementById('hint'),startCut=document.getElementById('startCut'),knife=document.getElementById('knife'),stage=document.getElementById('stage'),cutLine=document.getElementById('cutLine'),path=document.getElementById('path'),slice=document.getElementById('slice');
+let wished=false,cutDone=false,cutting=false,ctx=null;
+const palettes={
+purple:{side:'#a76ad8',mid:'#f4d5ff',top:'#fff0fa',filling:'#75408e',slice:'#e7b5f4'},
+chocolate:{side:'#6b342c',mid:'#bd7962',top:'#f2d4bd',filling:'#4a211f',slice:'#9a5142'},
+strawberry:{side:'#e67c9e',mid:'#ffd1df',top:'#fff0f5',filling:'#d84e7e',slice:'#f3a4be'},
+vanilla:{side:'#c7a46e',mid:'#fff0c9',top:'#fff9e9',filling:'#d5b47b',slice:'#f2dfb0'},
+caramel:{side:'#bd7937',mid:'#f8d69b',top:'#ffe9b6',filling:'#995021',slice:'#e9bd76'},
+rainbow:{side:'#8d6bd1',mid:'#ffd7ef',top:'#fff3fd',filling:'#58b9db',slice:'#efa8dc'}
+};
+function confetti(n=100){const colors=['#f0abfc','#c4b5fd','#fde68a','#fff','#f9a8d4','#86efac'];for(let i=0;i<n;i++){const e=document.createElement('i');e.className='confetti';e.style.left=Math.random()*100+'vw';e.style.background=colors[i%colors.length];e.style.animationDuration=(2.3+Math.random()*3)+'s';e.style.animationDelay=(Math.random()*.7)+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),6500)}}
+document.querySelectorAll('.flavor').forEach(el=>el.addEventListener('click',()=>{if(cutDone)return;document.querySelectorAll('.flavor').forEach(x=>x.classList.toggle('active',x===el));const c=palettes[el.dataset.flavor];for(const k of ['side','mid','top','filling','slice'])document.documentElement.style.setProperty('--'+k,c[k]);hint.textContent='Yummm! '+el.querySelector('b').textContent+' selected. Now tap each candle to blow it out!'}));
+function blow(c){if(c.classList.contains('blown'))return;c.classList.add('blown');if(candles.every(x=>x.classList.contains('blown'))){hint.textContent='All candles are out! ✨ Wish time is complete. Pick up the knife and swipe across the cake!';startCut.disabled=false;confetti(22)}else hint.textContent=`One candle down! ${candles.filter(x=>!x.classList.contains('blown')).length} candle(s) left — tap them too!`}
+candles.forEach(c=>{c.addEventListener('click',()=>blow(c));c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();blow(c)}})});
+document.getElementById('wish').onclick=()=>{wished=true;document.getElementById('wish').textContent='💜 Wish Made!';hint.textContent='Close your eyes and make a birthday wish, Panguuuu. May it come true! ✨';confetti(32)};
+startCut.onclick=()=>{if(candles.some(c=>!c.classList.contains('blown'))){hint.textContent='Blow out all the candles first! 🕯️';return}knife.classList.remove('hidden');startCut.textContent='Knife Ready — Swipe Across Cake';startCut.disabled=true;cutting=true;hint.textContent='Touch the cake and drag your finger from the top edge down across it to cut a slice.';stage.style.cursor='crosshair'};
+let down=false,point=null;
+function coords(e){const r=stage.getBoundingClientRect();return{x:(e.clientX-r.left)/r.width*500,y:(e.clientY-r.top)/r.height*350}}
+stage.addEventListener('pointerdown',e=>{if(!cutting||cutDone)return;const p=coords(e);const r=stage.getBoundingClientRect();const cakeRect=cake.getBoundingClientRect();if(e.clientY<cakeRect.top-25||e.clientY>cakeRect.bottom+20)return;down=true;point=p;try{stage.setPointerCapture(e.pointerId)}catch{}path.setAttribute('d',`M ${p.x} ${Math.max(0,p.y-65)} L ${p.x} ${p.y}`);cutLine.style.display='block';knife.style.left=Math.min(70,Math.max(5,(p.x/500*100)-15))+'%';knife.style.top=Math.min(78,Math.max(15,p.y/350*100))+'%';knife.style.right='auto';});
+stage.addEventListener('pointermove',e=>{if(!down||!cutting||cutDone)return;const p=coords(e);path.setAttribute('d',`M ${point.x} ${Math.max(0,point.y-65)} L ${p.x} ${p.y+65}`);knife.style.left=Math.min(75,Math.max(0,(p.x/500*100)-15))+'%';knife.style.top=Math.min(82,Math.max(12,p.y/350*100))+'%'});
+stage.addEventListener('pointerup',e=>{if(!down)return;down=false;if(!cutting||cutDone)return;const p=coords(e);if(point&&Math.abs(p.x-point.x)>35&&Math.abs(p.y-point.y)>35){doCut()}else{hint.textContent='Swipe diagonally across the cake a little farther to cut a slice!'}});
+function doCut(){cutDone=true;cutting=false;cake.classList.add('cut');slice.style.opacity='1';knife.classList.add('hidden');cutLine.style.display='none';document.getElementById('celebrate').classList.remove('hidden');hint.textContent='You did it, Divyasree! Your cake slice is ready. Happy birthday! 🎂';startCut.textContent='🎂 Cake Cut!';confetti(190);document.getElementById('message').innerHTML='To my Panguuuu 💜<br><strong>You cut your birthday cake!</strong> Even though I couldn’t be there beside you, I’m celebrating with you from here. May your days be full of happiness, laughter, tasty food, and lovely memories. Happy 20th birthday, Divyaaaaa!<br><strong>— Kishore</strong>'}
+document.getElementById('reset').onclick=()=>location.reload();
+document.getElementById('music').onclick=async()=>{try{ctx=ctx||new(window.AudioContext||window.webkitAudioContext)();if(ctx.state==='suspended')await ctx.resume();const notes=[523,523,587,523,698,659,523,523,587,523,784,698,523,523,1046,880,698,659,587];let i=0;function play(){if(i>=notes.length){document.getElementById('music').textContent='♫ Play Tune Again';return}const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=notes[i];g.gain.setValueAtTime(.0001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(.11,ctx.currentTime+.03);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+.26);o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+.28);i++;setTimeout(play,310)}play();document.getElementById('music').textContent='♫ Birthday Tune Playing…'}catch(e){hint.textContent='Tap the music button again to allow sound in your browser.'}};
+</script></body></html>
